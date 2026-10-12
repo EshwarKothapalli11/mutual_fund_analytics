@@ -1,7 +1,6 @@
 
-
-
 from pathlib import Path
+
 import requests
 import pandas as pd
 
@@ -10,29 +9,48 @@ RAW_DIR = PROJECT_DIR / "data" / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 FUNDS = {
+    # Schemes required for Bluestock Day 1
+    "SBI_Large_Cap_Direct": {
+        "code": "119598",
+        "expected": "SBI Large Cap",
+    },
+    "ICICI_Prudential_Large_Cap_Direct": {
+        "code": "120586",
+        "expected": "ICICI Prudential Large Cap",
+    },
+    "Nippon_India_Large_Cap_Direct": {
+        "code": "118632",
+        "expected": "Nippon India Large Cap",
+    },
+    "Axis_Large_Cap_Direct": {
+        "code": "120465",
+        "expected": "Axis Large Cap",
+    },
+    "Kotak_Large_Cap_Direct": {
+        "code": "120152",
+        "expected": "Kotak Large Cap",
+    },
+
+    # Existing schemes retained
     "HDFC_Large_Cap": {
         "code": "119018",
-        "expected": "HDFC Large Cap Fund",
+        "expected": "HDFC",
     },
     "SBI_Large_Cap": {
         "code": "119598",
-        "expected": "SBI Large Cap Fund",
+        "expected": "SBI Large Cap",
     },
     "ICICI_Prudential_Large_Cap": {
         "code": "120586",
-        "expected": "ICICI Prudential Large Cap Fund",
-    },
-    "Nippon_India_Large_Cap": {
-        "code": "118632",
-        "expected": "Nippon India Large Cap Fund",
+        "expected": "ICICI Prudential Large Cap",
     },
     "Axis_Large_Cap": {
         "code": "120465",
-        "expected": "Axis Large Cap Fund",
+        "expected": "Axis Large Cap",
     },
     "Kotak_Large_Cap": {
         "code": "120152",
-        "expected": "Kotak Large Cap Fund",
+        "expected": "Kotak Large Cap",
     },
 }
 
@@ -50,12 +68,11 @@ def fetch_nav(label, details):
         result = response.json()
 
         actual_name = result.get("meta", {}).get("scheme_name", "")
-
         print("API scheme name:", actual_name)
 
-        # Prevent incorrect scheme names from being saved.
+        # Save only if the actual scheme name matches.
         if expected.lower() not in actual_name.lower():
-            print("SKIPPED: Scheme name did not match the expected name.")
+            print("SKIPPED: Scheme name did not match.")
             return
 
         records = result.get("data", [])
@@ -68,12 +85,14 @@ def fetch_nav(label, details):
             df["date"], format="%d-%m-%Y", errors="coerce"
         )
         df["nav"] = pd.to_numeric(df["nav"], errors="coerce")
-        df = df.dropna(subset=["date", "nav"])
 
+        df = df.dropna(subset=["date", "nav"])
         df["scheme_code"] = code
         df["scheme_name"] = actual_name
-        df = df[["scheme_code", "scheme_name", "date", "nav"]]
-        df = df.sort_values("date")
+
+        df = df[
+            ["scheme_code", "scheme_name", "date", "nav"]
+        ].sort_values("date")
 
         output = RAW_DIR / f"live_nav_{label.lower()}.csv"
         df.to_csv(output, index=False)
