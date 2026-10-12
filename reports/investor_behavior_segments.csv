@@ -1,0 +1,4 @@
+behavior_segment,investor_count,average_transactions,average_total_transaction_amount_inr,investor_percentage
+All three transaction types,2332,8.60205831903945,1052624.6329331046,46.64
+Single transaction type,804,2.191542288557214,88289.73880597015,16.08
+Two transaction types,1864,5.877682403433476,534267.6158798283,37.28
