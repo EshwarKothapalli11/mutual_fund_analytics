@@ -4,3 +4,6 @@ __pycache__/
 venv/
 .env
 .ipynb_checkpoints/
+
+# Private investor-level analysis reports
+reports/investor_behavior_summary.csv
