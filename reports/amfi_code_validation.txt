@@ -1,0 +1,7 @@
+AMFI Scheme Code Validation
+===========================
+Fund master unique codes: 40
+NAV history unique codes: 40
+Fund master codes missing from NAV history: 0
+NAV history codes absent from fund master: 0
+Result: PASS - all 40 scheme codes match.
