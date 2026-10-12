@@ -1,0 +1,17 @@
+filename,rows,columns,missing_cells,missing_columns,duplicate_rows
+01_fund_master.csv,40,15,0,{},0
+02_nav_history.csv,46000,3,0,{},0
+03_aum_by_fund_house.csv,90,5,0,{},0
+04_monthly_sip_inflows.csv,48,6,12,{'yoy_growth_pct': 12},0
+05_category_inflows.csv,144,3,0,{},0
+06_industry_folio_count.csv,21,6,0,{},0
+07_scheme_performance.csv,40,19,0,{},0
+08_investor_transactions.csv,32778,13,0,{},0
+09_portfolio_holdings.csv,322,8,0,{},0
+10_benchmark_indices.csv,8050,3,0,{},0
+live_nav_axis_large_cap.csv,3398,4,0,{},0
+live_nav_hdfc_large_cap.csv,3390,4,0,{},0
+live_nav_icici_prudential_large_cap.csv,3389,4,0,{},0
+live_nav_kotak_large_cap.csv,3388,4,0,{},0
+live_nav_nippon_india_large_cap.csv,3389,4,0,{},0
+live_nav_sbi_large_cap.csv,3398,4,0,{},0
