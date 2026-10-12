@@ -1,0 +1,37 @@
+state,transaction_type,transaction_count,total_amount_inr
+Delhi,Lumpsum,677,174727166
+Delhi,Redemption,394,97792630
+Delhi,SIP,1606,17113608
+Gujarat,Lumpsum,712,180937488
+Gujarat,Redemption,415,99042548
+Gujarat,SIP,1653,18378904
+Haryana,Lumpsum,656,163339018
+Haryana,Redemption,390,98118640
+Haryana,SIP,1690,18176696
+Karnataka,Lumpsum,605,154407031
+Karnataka,Redemption,396,101649636
+Karnataka,SIP,1620,17696903
+Madhya Pradesh,Lumpsum,720,183806278
+Madhya Pradesh,Redemption,415,103823972
+Madhya Pradesh,SIP,1796,20682243
+Maharashtra,Lumpsum,652,164223474
+Maharashtra,Redemption,373,88844377
+Maharashtra,SIP,1499,16445629
+Punjab,Lumpsum,721,184112492
+Punjab,Redemption,452,111527903
+Punjab,SIP,1792,20140064
+Rajasthan,Lumpsum,672,175496460
+Rajasthan,Redemption,406,106605129
+Rajasthan,SIP,1499,16544233
+Tamil Nadu,Lumpsum,684,177713963
+Tamil Nadu,Redemption,480,119058906
+Tamil Nadu,SIP,1642,18404368
+Telangana,Lumpsum,672,174342979
+Telangana,Redemption,390,97256089
+Telangana,SIP,1656,18620216
+Uttar Pradesh,Lumpsum,666,165609025
+Uttar Pradesh,Redemption,404,102224990
+Uttar Pradesh,SIP,1625,17534858
+West Bengal,Lumpsum,658,161106074
+West Bengal,Redemption,452,118580671
+West Bengal,SIP,1638,17495769
