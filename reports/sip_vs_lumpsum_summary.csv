@@ -1,0 +1,3 @@
+transaction_type,transaction_count,unique_investors,total_amount_inr,average_amount_inr,median_amount_inr
+Lumpsum,8095,3760,2059821448,254456.02,251770.0
+SIP,19716,4762,217233491,11018.13,5139.0
