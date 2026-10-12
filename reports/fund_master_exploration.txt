@@ -1,53 +1,54 @@
-FUND MASTER EXPLORATION REPORT
-========================================
+﻿Fund Master Exploration Report
+=============================
 
+Dataset: data/raw/01_fund_master.csv
 Total schemes: 40
 Unique fund houses: 10
 
-FUND HOUSES
-fund_house
-SBI Mutual Fund             5
-HDFC Mutual Fund            5
-ICICI Prudential MF         5
-Nippon India MF             5
-Kotak Mahindra MF           4
-Axis Mutual Fund            4
-Aditya Birla Sun Life MF    3
-UTI Mutual Fund             3
-Mirae Asset MF              3
-DSP Mutual Fund             3
+Fund Houses
+-----------
+SBI Mutual Fund: 5
+HDFC Mutual Fund: 5
+ICICI Prudential MF: 5
+Nippon India MF: 5
+Kotak Mahindra MF: 4
+Axis Mutual Fund: 4
+Aditya Birla Sun Life MF: 3
+UTI Mutual Fund: 3
+Mirae Asset MF: 3
+DSP Mutual Fund: 3
 
-CATEGORIES
-category
-Equity    34
-Debt       6
+Categories
+----------
+Equity: 34
+Debt: 6
 
-SUB-CATEGORIES
-sub_category
-Large Cap          14
-Mid Cap             7
-Small Cap           6
-Liquid              3
-Gilt                2
-Flexi Cap           2
-Value               1
-Short Duration      1
-Index/ETF           1
-Index               1
-Large & Mid Cap     1
-ELSS                1
+Subcategories
+-------------
+Large Cap: 14
+Mid Cap: 7
+Small Cap: 6
+Liquid: 3
+Gilt: 2
+Flexi Cap: 2
+Value: 1
+Short Duration: 1
+Index/ETF: 1
+Index: 1
+Large & Mid Cap: 1
+ELSS: 1
 
-RISK GRADES
-risk_category
-Moderate           16
-High                8
-Very High           6
-Low                 6
-Moderately High     4
+Risk Categories
+---------------
+Moderate: 16
+High: 8
+Very High: 6
+Low: 6
+Moderately High: 4
 
-PLAN TYPES
-plan
-Regular    32
-Direct      8
-
-Scheme code range: 100016 to 149324
+Conclusion
+----------
+The dataset contains 40 schemes across 10 fund houses.
+Equity schemes account for 34 records, while debt schemes
+account for 6 records.
+'@ | Set-Content -Encoding utf8 .\reports\fund_master_exploration.txt
