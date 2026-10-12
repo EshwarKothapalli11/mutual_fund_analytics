@@ -9,32 +9,9 @@ RAW_DIR = PROJECT_DIR / "data" / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 FUNDS = {
-    # Schemes required for Bluestock Day 1
-    "SBI_Large_Cap_Direct": {
-        "code": "119598",
-        "expected": "SBI Large Cap",
-    },
-    "ICICI_Prudential_Large_Cap_Direct": {
-        "code": "120586",
-        "expected": "ICICI Prudential Large Cap",
-    },
-    "Nippon_India_Large_Cap_Direct": {
-        "code": "118632",
-        "expected": "Nippon India Large Cap",
-    },
-    "Axis_Large_Cap_Direct": {
-        "code": "120465",
-        "expected": "Axis Large Cap",
-    },
-    "Kotak_Large_Cap_Direct": {
-        "code": "120152",
-        "expected": "Kotak Large Cap",
-    },
-
-    # Existing schemes retained
     "HDFC_Large_Cap": {
         "code": "119018",
-        "expected": "HDFC",
+        "expected": "HDFC Large Cap",
     },
     "SBI_Large_Cap": {
         "code": "119598",
@@ -43,6 +20,10 @@ FUNDS = {
     "ICICI_Prudential_Large_Cap": {
         "code": "120586",
         "expected": "ICICI Prudential Large Cap",
+    },
+    "Nippon_India_Large_Cap": {
+        "code": "118632",
+        "expected": "Nippon India Large Cap",
     },
     "Axis_Large_Cap": {
         "code": "120465",
@@ -53,8 +34,6 @@ FUNDS = {
         "expected": "Kotak Large Cap",
     },
 }
-
-
 def fetch_nav(label, details):
     code = details["code"]
     expected = details["expected"]
