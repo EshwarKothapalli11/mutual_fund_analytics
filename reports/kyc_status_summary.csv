@@ -1,0 +1,3 @@
+kyc_status,transaction_count,total_amount_inr,average_amount_inr,transaction_percentage
+Pending,2632,287408049,109197.58700607903,8.03
+Verified,30146,3234172381,107283.6323558681,91.97
